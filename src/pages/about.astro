@@ -7,8 +7,8 @@ import SplitHero from '../components/hero/HeroSplit.astro';
 import AbstractBG from "../components/bg/AbstractBG2.astro";
 ---
 <BaseLayout title="About">
-	<Header />
-	<AbstractBG>
+	<Header slot="nav" />
+	<AbstractBG slot="hero">
 		<SplitHero>
 			<h1 slot="Heading" class="mt-2 text-4xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-5xl">About Ava</h1>
 			<p slot="description" class="mt-6 text-lg/8 text-gray-300">Put da bio here</p>
@@ -20,4 +20,5 @@ import AbstractBG from "../components/bg/AbstractBG2.astro";
 			</div>
 		</SplitHero>
 	</AbstractBG>
+	
 </BaseLayout>

@@ -5,23 +5,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBG.astro";
 import Hero from "../components/hero/HeroCentered.astro";
 import Header from "../components/navheader/Header.astro";
+import ProjectListBento from "../components/bento/ProjectListBento.astro";
+import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
 ---
 
 <BaseLayout title="Home">
-	<Header />
-    <AbstractBG>
-    <Hero>
-      <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
-        Ava Daly</h1>
-      <h1 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
-        Creative Industry PM</h1>
-      <p slot="description" class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-              Creating. Aligning. Inspiring.</p>
-      <a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-        Contact</a>
-        <a slot="actions" href="/projects" class="text-sm/6 font-semibold text-pale-slate">
-          Browse Projects<span aria-hidden="true">→</span></a>
-    </Hero>
+	<Header slot="nav" />
+    <AbstractBG slot="hero">
+      <Hero>
+        <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
+          Ava Daly</h1>
+        <h1 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
+          Creative Industry PM</h1>
+        <p slot="description" class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                Creating. Aligning. Inspiring.</p>
+        <a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+          Contact</a>
+          <a slot="actions" href="/projects" class="text-sm/6 font-semibold text-pale-slate">
+            Browse Projects<span aria-hidden="true">→</span></a>
+        </Hero>
 	<h1 class="font-wixdisplay">I do cool stuff with cool people</h1>
   </AbstractBG>
+  <div slot="main" class="py-16">
+        <h1>Strength Behind Craft</h1>
+    </div>
+                
+    <ProjectListBento slot="main">
+        <h1 slot="title" class="py-8">This is where the project cards will go</h1>
+        <ProjectCardBase slot="cards">
+            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
+            <h3 slot="title" >Project Title</h3>
+        </ProjectCardBase>
+        <ProjectCardBase slot="cards">
+            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
+            <h3 slot="title" >Project Title</h3>
+        </ProjectCardBase>
+        <ProjectCardBase slot="cards">
+            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
+            <h3 slot="title" >Project Title</h3>
+        </ProjectCardBase>
+    </ProjectListBento>
 </BaseLayout>

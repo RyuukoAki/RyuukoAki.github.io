@@ -4,11 +4,11 @@ import "../styles/global.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/navheader/Header.astro';
 import SplitHero from '../components/hero/HeroSplit.astro';
-import AbstractBG from "../components/bg/AbstractBG3.astro";
+import AbstractBG from "../components/bg/AbstractBG4.astro";
 ---
 <BaseLayout title="Contact">
-	<Header />
-	<AbstractBG>
+	<Header slot="nav" />
+	<AbstractBG slot="hero">
 		<SplitHero>
 			<h1 slot="Heading" class="mt-2 text-4xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-5xl">Contact Ava</h1>
 			<p slot="description" class="mt-6 text-lg/8 text-gray-300">She'd love to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to reach out.</p>
