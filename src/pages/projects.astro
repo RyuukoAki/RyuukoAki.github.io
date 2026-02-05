@@ -1,0 +1,27 @@
+---
+// src/pages/projects.astro
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/navheader/Header.astro";
+import AbstractBG from "../components/bg/AbstractBG4.astro";
+import Hero from "../components/hero/HeroCentered.astro";
+---
+
+<BaseLayout title="Projects">
+	<Header />
+        <AbstractBG>
+            <Hero>
+                <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
+                    Projects</h1>
+                <h1 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
+                    this will be a page of projects</h1>
+                <p slot="description" class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                    Listing stuff, search for stuff, filter by stuff</p>
+                <a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                    whoa cool</a>
+                    <a slot="actions" href="/projects" class="text-sm/6 font-semibold text-pale-slate">
+                        super neat<span aria-hidden="true">→</span></a>
+            </Hero>
+            <h1 class="font-wixdisplay">Lotta old stuff down here</h1>
+        </AbstractBG>
+</BaseLayout>
