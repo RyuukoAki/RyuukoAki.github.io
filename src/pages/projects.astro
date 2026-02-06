@@ -6,7 +6,7 @@ import Header from "../components/navheader/Header.astro";
 import AbstractBG from "../components/bg/AbstractBG3.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
-import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
+import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.astro";
 ---
 
 <BaseLayout title="Projects">
@@ -26,17 +26,12 @@ import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
                 
     <ProjectListBento slot="main">
         <h1 slot="title" class="py-8">This is where the project cards will go</h1>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
     </ProjectListBento>
 </BaseLayout>

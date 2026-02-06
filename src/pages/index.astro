@@ -6,7 +6,7 @@ import AbstractBG from "../components/bg/AbstractBG.astro";
 import Hero from "../components/hero/HeroCentered.astro";
 import Header from "../components/navheader/Header.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
-import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
+import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.astro";
 ---
 
 <BaseLayout title="Home">
@@ -17,35 +17,41 @@ import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
           Ava Daly</h1>
         <h1 slot="subtitle" class="font-wixdisplay text-lg font-light tracking-tight text-balance text-onyx-20 dark:text-pale-slate-90 sm:text-7xl">
           Creative Industry PM</h1>
-        <p slot="description" class="mt-8 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60 sm:text-xl/8">
+        <p slot="description" class="font-wixdisplay mt-8 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60 sm:text-xl/8">
                 Creating. Aligning. Inspiring.</p>
-        <a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-m font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+        <a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm  hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
           Contact</a>
-          <a slot="actions" href="/projects" class="text-sm font-semibold text-wine dark:text-pale-slate">
+          <a slot="actions" href="/projects" class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-onyx">
             Browse Projects<span aria-hidden="true">→</span></a>
         </Hero>
   </AbstractBG>
-  <div slot="main" class=" p-8 rounded-xl shadow-xl ring-1 ring-onyx-20/20 bg-onyx-50/10 dark:shadow-onyx-20 dark:shadow-md dark:ring-slate-20/60 dark:bg-wine-30/10">
-      <h4>Who am I</h4>  
-      <h1 class=" font-wixdisplay text-pink-wine font-bold">Strength Behind Craft</h1>
+  <div slot="main" class=" p-8 rounded-xl shadow-xl ring-1 ring-onyx-20/20 bg-onyx-50/10 dark:shadow-onyx-20 dark:shadow-md dark:ring-slate-20/60 dark:bg-wine-30/10"> 
+      <h1 class="text-pink-wine-40 font-bold">Strength Behind Craft</h1>
         <p class="font-notosans mt-4 text-lg text-onyx dark:text-pale-slate">
-          Welcome to my portfolio website! I'm Ava Daly, a passionate Creative Industry Project Manager dedicated to bringing innovative projects to life. With a keen eye for detail and a commitment to excellence, I specialize in aligning creative visions with strategic execution. Explore my projects to see how I create, align, and inspire in the dynamic world of creative industries.
+          I'm a creative project manager specializing in digital games. I keep artists, programmers, budgets, and timelines aligned so your team can stay in flow and focus on their craft.<br />
+          I've worked every part of the pipeline—from texture baking and character retopology to shader optimization and build systems. This hands-on experience lets me translate between art, code, and production, removing friction and protecting your team's time. <br />
+          My role is handling the operational load: sprint planning, issue prioritization, stakeholder updates, and the bureaucratic heavy-lifting that keeps projects moving smoothly. While I enjoy creative disciplines myself, my impact comes from organizing the work and creating the conditions for world-class specialists to do their best. <br/>
+          With dual degrees in New Media and Business Administration, cross-cultural experience from studying in Japan, and a track record leading teams through preproduction to launch, I bring both strategic vision and hands-on logistics to projects of any scale. <br/><br/>
         </p>
+        <h4 class="pb-5">Let's talk about how I can support your next project.</h4>
+        <div>
+            <a slot="actions" href="/contact" class="mt-16 rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm  hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+              Get in Touch</a>
+            <a slot="actions" href="/projects" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+            Browse Previous Works<span aria-hidden="true">→</span></a>
+        </div>
     </div>
                 
     <ProjectListBento slot="main">
-        <h1 slot="title" class="py-8">This is where the project cards will go</h1>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
-        <ProjectCardBase slot="cards">
-            <img slot="image" src="src/assets/blog-placeholder-3.jpg" alt="Project Image" class=""/>
-            <h3 slot="title" >Project Title</h3>
-        </ProjectCardBase>
+        <h1 slot="title" class="rounded-2xl p-8 bg-pale-slate/10">Recent Projects</h1>
+        <a slot="title" href="/projects" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+            Browse All Projects<span aria-hidden="true">→</span></a>
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+        <ProjectCardPlaceholder slot="cards" />
+          
     </ProjectListBento>
 </BaseLayout>
