@@ -1,4 +1,6 @@
-# Astro Starter Kit: Blog
+# Astro Portfolio site
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8d5b61f7-5713-42ad-9a89-2a36fbf285df/deploy-status)](https://app.netlify.com/projects/ava-daly/deploys)
 
 ```sh
 npm create astro@latest -- --template blog
