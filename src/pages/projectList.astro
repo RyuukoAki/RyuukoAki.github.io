@@ -2,17 +2,15 @@
 // src/pages/projects.astro
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/navheader/Header.astro";
-import AbstractBG from "../components/bg/AbstractBG3.astro";
+import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
 import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.astro";
+import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
 ---
 
 <BaseLayout title="Projects">
-	<Header slot="nav" />
     <AbstractBG slot="hero">
-
         <Hero>
             <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
                 Projects</h1>
@@ -20,12 +18,9 @@ import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.a
                 this will be a page of projects</h2>
         </Hero>
     </AbstractBG>
-    <div slot="main" class="py-16">
-        <h1>Strength Behind Craft</h1>
-    </div>
-                
     <ProjectListBento slot="main">
-        <h1 slot="title" class="py-8">This is where the project cards will go</h1>
+        <h1 slot="title" class="py-8"><a href="/projects/project-1/">List of Projects</a></h1>
+        <ProjectCardBase slot="cards" title="Project Title" description="Brief description of the project, your role, and key contributions." />
         <ProjectCardPlaceholder slot="cards" />
         <ProjectCardPlaceholder slot="cards" />
         <ProjectCardPlaceholder slot="cards" />

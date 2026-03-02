@@ -1,19 +1,20 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/navheader/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-const { title = "Astro + Tailwind v4" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="bg-slate text-gray-900 dark:bg-onyx dark:text-pale-slate antialiased">
-    <slot name="nav"/>
+    <Header />
     <slot name="hero" />
-    <main class="container mx-auto mt-16 mb-32 px-4 sm:px-6 lg:px-16">
+    <main class="container mx-auto mb-32 px-8 sm:px-16 lg:px-32">
       <slot name="main" />
     </main>
     <Footer />

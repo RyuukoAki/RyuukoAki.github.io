@@ -4,13 +4,11 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBG.astro";
 import Hero from "../components/hero/HeroCentered.astro";
-import Header from "../components/navheader/Header.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
 import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.astro";
 ---
 
 <BaseLayout title="Home">
-	<Header slot="nav" />
     <AbstractBG slot="hero">
       <Hero>
         <h1 slot="title" class="font-wixdisplay text-9xl font-black tracking-tight text-balance text-onyx-20 dark:text-pale-slate sm:text-7xl">
@@ -35,16 +33,16 @@ import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.a
         </p>
         <h4 class="pb-5">Let's talk about how I can support your next project.</h4>
         <div>
-            <a slot="actions" href="/contact" class="mt-16 rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm  hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+            <a href="/contact" class="mt-16 rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm  hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
               Get in Touch</a>
-            <a slot="actions" href="/projects" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+            <a href="/projectList" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
             Browse Previous Works<span aria-hidden="true">→</span></a>
         </div>
     </div>
                 
     <ProjectListBento slot="main">
         <h1 slot="title" class="rounded-2xl p-8 bg-pale-slate/10">Recent Projects</h1>
-        <a slot="title" href="/projects" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
+        <a slot="title" href="/projectList" class="rounded-3xl bg-onyx-10/10 px-3.5 py-1.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry">
             Browse All Projects<span aria-hidden="true">→</span></a>
         <ProjectCardPlaceholder slot="cards" />
         <ProjectCardPlaceholder slot="cards" />
