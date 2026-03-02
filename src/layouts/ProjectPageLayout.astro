@@ -13,6 +13,7 @@ const { frontmatter } = Astro.props;
             {frontmatter.subtitle}</h2>
     </Hero>
     <div slot="main" class="px-32 text-lg text-gray-700 dark:text-gray-300">
+        <p class="mb-4">{frontmatter.pubDate.toLocaleDateString()}</p>
         <slot />
     </div>
 </BaseLayout>

@@ -5,8 +5,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
-import ProjectCardPlaceholder from "../components/cards/ProjectCardPlaceholder.astro";
 import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("projects");
 ---
 
 <BaseLayout title="Projects">
@@ -20,13 +21,8 @@ import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
     </AbstractBG>
     <ProjectListBento slot="main">
         <h1 slot="title" class="py-8"><a href="/projects/project-1/">List of Projects</a></h1>
-        <ProjectCardBase slot="cards" title="Project Title" description="Brief description of the project, your role, and key contributions." />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
-        <ProjectCardPlaceholder slot="cards" />
+        {allProjects.map((project: any) => 
+            <ProjectCardBase slot="cards" href={`/projects/${project.id}/`} title={project.data.title} description={project.data.description} heroImage={project.data.heroImage.url} />
+        )}
     </ProjectListBento>
 </BaseLayout>
