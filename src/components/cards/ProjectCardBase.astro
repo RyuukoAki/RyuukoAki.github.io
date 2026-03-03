@@ -1,13 +1,13 @@
 ---
-const { title, description, imgurl, href } = Astro.props;
+const { href, title, description, imgurl } = Astro.props;
 ---
 
-<a href={href}> <div class=" max-w-1/1 rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
+<a href={href}> <div class=" max-w-1/1 rounded-xl shadow-xl ring-1 ring-white/10 hover:shadow-3xl sm:w-228 md:-ml-4 lg:ml-0">
     <div class="overflow-hidden rounded-xl bg-pink-wine">
 	    <img src={imgurl} alt={title} class="object-cover w-full h-48" /> 
     </div>
     <div>
-        <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight dark:text-pale-slate">{title}</h3>
-        <p class="mt-2 text-sm dark:text-pale-slate">{description}</p>
+        <h3 class="pt-4 px-4 text-lg font-semibold leading-8 tracking-tight dark:text-pale-slate">{title}</h3>
+        <p class="p-4 text-sm dark:text-pale-slate">{description}</p>
     </div>
 </div></a>

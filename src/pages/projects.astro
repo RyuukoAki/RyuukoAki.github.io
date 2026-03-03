@@ -15,22 +15,12 @@ const allProjects = await getCollection("projects");
     <Hero>
       <h1
         slot="title"
-        class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl"
-      >
+        class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-7xl">
         Projects
       </h1>
-      <h2
-        slot="subtitle"
-        class="text-5xl font-wixdisplay tracking-tight text-balance text-slate-90 sm:text-7xl"
-      >
-        this will be a page of projects
-      </h2>
     </Hero>
   </AbstractBG>
   <ProjectListBento slot="main">
-    <h1 slot="title" class="py-8">
-      <a href="/projects/project-1/">List of Projects</a>
-    </h1>
     {
       allProjects.map((project: any) => (
         <ProjectCardBase

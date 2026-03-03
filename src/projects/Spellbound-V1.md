@@ -1,28 +1,30 @@
 ---
+slug: "spellbound-v1"
 title: "Spellbound V1"
-subtitle: "A spellcasting game made in Godot"
-description: "This site, made with Astro, TailwindCSS, and Github"
-pubDate: 2024-04-03
+description: "An isometric rogue-like game made in Godot for Game Design Theory and Practice"
+pubDate: "2024-04"
 status: "Ongoing"
-contributors: ["Ava Daly"]
+contributors: ["Ava Daly", "JJ Llorin", "Maddison Whelpley", "Ivy Heal"]
 heroImage:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "../../src/assets/blog-placeholder-5.jpg"
   alt: "The Astro logo on a dark background with a pink glow."
 imgGallery: [
   {
-    url: "src/assets/blog-placeholder-3.jpg",
+    url: "../../src/assets/blog-placeholder-2.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "src/assets/blog-placeholder-3.jpg",
+    url: "../../src/assets/blog-placeholder-3.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "src/assets/blog-placeholder-3.jpg",
+    url: "../../src/assets/blog-placeholder-4.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   }
 ]
 tags: ["astro", "coding", "ongoing", "web"]
 ---
 
-First project on the site, the site itself. Made with [Astro](https://astro.build/), [TailwindCSS](https://tailwindcss.com/), and hosted on [Github](https://github.com/RyuukoAki/RyuukoAki.github.io), the site itself is always a work in progress. 
+*Spellbound* was the final project of the course *Game Design Theory and Practice*, where students in groups of four were tasked with creating a game that portrayed randomly drawn values. <br/><br/>
+The game is an isometric rogue-like where the player-- playing as a wizard's aprentice-- must collect pages for their spellbook by defeating the origami creatures that have come to life from the pages of other spellbooks. with each new page collected, the player can learn a new spell, which they can use to defeat the enemies and progress through the levels. *Spellbound* features a variety of spells, each with their own unique effects, as well as a simple enemy AI and a basic level design. <br/><br/>
+The game is no longer being developed, however it was great learning experience and I am excited to be working on a remake for *Advanced Studio*.
