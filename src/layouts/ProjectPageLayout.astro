@@ -1,17 +1,20 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Hero from "../components/hero/HeroProjectImg.astro";
+import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
+import Hero from "../components/hero/HeroCenteredCondensed.astro";
 
 const { project } = Astro.props;
 ---
 <BaseLayout title="fallback">
-    <Hero slot="hero">
-        <img slot="image" src={project.heroImage.url} alt={project.heroImage.alt} class="object-cover w-full" />
-        <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-3xl">
-            {project.title}</h1>
-        <h2 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-slate-90 sm:text-3xl">
-            {project.subtitle}</h2>
-    </Hero>
+    <AbstractBG slot="hero">
+        <Hero>
+            <img slot="image" src={project.heroImage.url} alt={project.heroImage.alt} class="object-cover w-full" />
+            <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-3xl">
+                {project.title}</h1>
+            <h2 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-slate-90 sm:text-3xl">
+                {project.subtitle}</h2>
+        </Hero>
+    </AbstractBG>
     <div slot="main" class="px-32 text-lg text-gray-700 dark:text-gray-300">
         <p class="mb-4">{project.pubDate.toLocaleDateString()}</p>
         <slot />

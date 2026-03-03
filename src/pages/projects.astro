@@ -38,7 +38,7 @@ const allProjects = await getCollection("projects");
           href={`/projects/${project.id}/`}
           title={project.data.title}
           description={project.data.description}
-          heroImage={project.data.heroImage.url}
+          imgurl={project.data.heroImage.url}
         />
       ))
     }
