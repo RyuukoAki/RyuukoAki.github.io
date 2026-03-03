@@ -2,8 +2,8 @@
 import BaseLayout from "./BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
+import { Image } from "astro:assets";
 import ImageBento from "../components/bento/ProjectPageImgBento.astro";
-import ImageBentoCard from "../components/cards/projectPageGalleryImg.astro";
 import type { CollectionEntry } from "astro:content";
 
 type ProjectData = CollectionEntry<"projects">["data"];
@@ -30,22 +30,19 @@ const { project } = Astro.props as Props;
     <p class="mx-4">Last Updated: {project.pubDate}</p>
     <p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
     <div class="mb-8 mx-auto">
-      <img
-        src={project.heroImage.url}
-        alt={project.heroImage.alt}
-      />
+      <Image src={project.cover} alt={project.coverAlt} />
     </div>
-    <slot />
-    <ImageBento>
-        {
-          project.imgGallery.map((image) => (
-            <ImageBentoCard
-                slot="cards"
-                alt={image.alt}
-                imgurl={image.url}
-            />
-          ))
-        }
-    </ImageBento>
   </div>
+  <slot />
+  <ImageBento>
+    {
+      project.gallery.map((image) => (
+        <div class=" max-w-full rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
+            <div class="overflow-hidden rounded-xl">
+	            <Image src={image.img} alt={image.alt} class="object-cover w-full h-48" /> 
+            </div>
+        </div>
+      ))
+    }
+  </ImageBento>
 </BaseLayout>

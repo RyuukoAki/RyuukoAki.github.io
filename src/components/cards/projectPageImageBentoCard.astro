@@ -1,0 +1,11 @@
+---
+import { Image } from 'astro:assets';
+const { project } = Astro.props;
+
+---
+
+<div class=" max-w-full rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
+    <div class="overflow-hidden rounded-xl">
+	    <Image src={project.heroImage.url} alt={project.heroImage.alt} class="object-cover w-full h-48" /> 
+    </div>
+</div>

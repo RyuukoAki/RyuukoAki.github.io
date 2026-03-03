@@ -6,22 +6,20 @@ import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 // Define a `loader` and `schema` for each collection
 const projects = defineCollection({
-	// Load Markdown and MDX files in the `src/projects/` directory.
+	// Load Markdown and MDX files in the `src/collections/projects/` directory.
 	loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects" }),
 	// Type-check frontmatter using a schema
-	    schema: z.object({
+	    schema: ({ image }) => z.object({
 		
       		title: z.string(),
 			description: z.string(),
 			pubDate: z.string(),
 			status: z.string(),
 			contributors: z.array(z.string()),
-			heroImage: z.object({
-				url: z.string(),
-				alt: z.string()
-			}),
-	  		imgGallery: z.array(z.object({
-				url: z.string(),
+			cover: image(),
+			coverAlt: z.string(),
+	  		gallery: z.array(z.object({
+				img : image(),
 				alt: z.string()
 	  		})),
 	  		youtubeEmbed: z.string().optional(),

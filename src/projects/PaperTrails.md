@@ -5,20 +5,19 @@ description: "An animated short made in 3D Studio Max for 3D Modeling and Animat
 pubDate: "2022-12"
 status: "Ongoing"
 contributors: ["Ava Daly"]
-heroImage:
-  url: "../../src/assets/paperTrails/paperTrailsHero.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
-imgGallery: [
+cover: "./assets/paperTrailsCover.webp"
+coverAlt: "The Astro logo on a dark background with a pink glow."
+gallery: [
   {
-    url: "../../src/assets/blog-placeholder-3.jpg",
+    img: "./assets/blog-placeholder-2.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "../../src/assets/blog-placeholder-3.jpg",
+    img: "./assets/blog-placeholder-4.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "../../src/assets/blog-placeholder-3.jpg",
+    img: "./assets/blog-placeholder-3.jpg",
     alt: "The Astro logo on a dark background with a pink glow."
   }
 ]

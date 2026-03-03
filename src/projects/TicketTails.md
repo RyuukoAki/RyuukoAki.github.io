@@ -5,21 +5,20 @@ description: "Submission for Global Game Jam 2026, made with Godot and C#"
 pubDate: "2026-02-03"
 status: "Ongoing"
 contributors: ["Ava Daly", "Keagan Reider", "Tristan Scott"]
-heroImage:
-  url: "https://ggjv4.s3.us-west-1.amazonaws.com/files/styles/sidebar_full/s3/games/2026/866465/featured/1000017151.png?VersionId=_aGLYMDwVC3xy2kmFkiZ4zNDj1ZByqJ0&itok=obTzKyF3"
-  alt: "Screenshot of the game showing the raccoons in a trench coat sneaking into a movie theatre."
-imgGallery: [
+cover: "./assets/ticketTailsCover.png"
+coverAlt: "The Astro logo on a dark background with a pink glow."
+gallery: [
   {
-    url: "https://ggjv4.s3.us-west-1.amazonaws.com/files/styles/sidebar_full/s3/games/2026/860026/team_picture/image.png?VersionId=X.NdhlpYtzm.jAqzL8okCHqNXXWPdLSi&itok=HLmizYwz",
-    alt: "three sprites of raccoons with three different coloured scarves."
+    img: "./assets/blog-placeholder-2.jpg",
+    alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "https://ggjv4.s3.us-west-1.amazonaws.com/files/styles/flexslider_full/s3/games/2026/860026/screenshot/Screenshot%202026-02-01%20161155.png?VersionId=pLbS3YyR_KSk.jImICbnSap9qtDJ5QYr&itok=1Tc1bz9D",
-    alt: "Screenshot of the game showing the raccoons in a trench coat navigating through a level."
+    img: "./assets/blog-placeholder-3.jpg",
+    alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    url: "https://ggjv4.s3.us-west-1.amazonaws.com/files/styles/flexslider_full/s3/games/2026/860026/screenshot/Screenshot%202026-02-01%20161312.png?VersionId=PeG86iMRvvy1q5mrTfTpfggBsUCfrLZE&itok=CNzGLQz3",
-    alt: "Screenshot of the game showing the raccoons in a trench coat avoiding security guards."
+    img: "./assets/blog-placeholder-4.jpg",
+    alt: "The Astro logo on a dark background with a pink glow."
   }
 ]
 tags: ["games", "ggj", "2026", "godot", "c#"]
