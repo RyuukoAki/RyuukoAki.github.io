@@ -1,22 +1,51 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
+import ImageBento from "../components/bento/ProjectPageImgBento.astro";
+import ImageBentoCard from "../components/cards/projectPageGalleryImg.astro";
+import type { CollectionEntry } from "astro:content";
 
-const { project } = Astro.props;
+type ProjectData = CollectionEntry<"projects">["data"];
+
+interface Props {
+  project: ProjectData;
+}
+
+const { project } = Astro.props as Props;
 ---
-<BaseLayout title="fallback">
-    <AbstractBG slot="hero">
-        <Hero>
-            <img slot="image" src={project.heroImage.url} alt={project.heroImage.alt} class="object-cover w-full" />
-            <h1 slot="title" class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-3xl">
-                {project.title}</h1>
-            <h2 slot="subtitle" class="text-5xl font-wixdisplay tracking-tight text-balance text-slate-90 sm:text-3xl">
-                {project.subtitle}</h2>
-        </Hero>
-    </AbstractBG>
-    <div slot="main" class="px-32 text-lg text-gray-700 dark:text-gray-300">
-        <p class="mb-4">{project.pubDate.toLocaleDateString()}</p>
-        <slot />
+
+<BaseLayout title={project.title}>
+  <AbstractBG slot="hero">
+    <Hero>
+      <h1
+        slot="title"
+        class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-3xl"
+      >
+        {project.title}
+      </h1>
+    </Hero>
+  </AbstractBG>
+  <div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
+    <p class="mx-4">Last Updated: {project.pubDate}</p>
+    <p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
+    <div class="mb-8 mx-auto">
+      <img
+        src={project.heroImage.url}
+        alt={project.heroImage.alt}
+      />
     </div>
+    <slot />
+    <ImageBento>
+        {
+          project.imgGallery.map((image) => (
+            <ImageBentoCard
+                slot="cards"
+                alt={image.alt}
+                imgurl={image.url}
+            />
+          ))
+        }
+    </ImageBento>
+  </div>
 </BaseLayout>
