@@ -4,17 +4,28 @@ import "../styles/global.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SplitHero from '../components/hero/HeroSplit.astro';
 import AbstractBG from "../components/bg/AbstractBG2.astro";
+import { Image } from 'astro:assets';
+import sableimage from '../assets/Sable.jpg';
+import irisImage from '../assets/Iris.jpg';
 ---
 <BaseLayout title="About">
 	<AbstractBG slot="hero">
 		<SplitHero>
-			<h1 slot="Heading" class="mt-2 text-4xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-5xl">About Ava</h1>
-			<p slot="description" class="mt-6 text-lg/8 text-gray-300">Put da bio here</p>
+			<h1 slot="Heading" class="mt-2 text-4xl font-wix tracking-tight text-pretty text-onyx dark:text-pale-slate ">About Ava</h1>
+			<p slot="description" class="font-noto mt-6 text-md text-onyx dark:text-pale-slate">
+				Ava is a creative project manager specializing in digital games. Aside from working with artists, programmers, and producers on projects, she also enjoys listening to house, EDM, and alternative rock music. Socially, Ava likes playing Magic: the Gathering and spending time with her cats, Sable and Iris.
+			</p>
 			<div slot="actions" class="mt-10 flex items-center gap-x-6">
 				<a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
         Contact</a>
-        <a slot="actions" href="/projects" class="text-sm/6 font-semibold text-pale-slate">
+        <a slot="actions" href="/projects" class="text-sm/6 font-semibold text-onyx dark:text-pale-slate">
           Browse Projects<span aria-hidden="true">→</span></a>
+			</div>
+			<div slot="frame" class="w-full">
+				<Image src={sableimage} alt="Picture of Ava's cat, Sable" class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg" />
+			</div>
+			<div slot="frame" class="w-full ">
+				<Image src={irisImage} alt="Picture of Ava's cat, Iris" class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg" />
 			</div>
 		</SplitHero>
 	</AbstractBG>

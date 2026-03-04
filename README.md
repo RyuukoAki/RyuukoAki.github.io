@@ -1,6 +1,6 @@
 # Astro Portfolio site
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8d5b61f7-5713-42ad-9a89-2a36fbf285df/deploy-status)](https://app.netlify.com/projects/ava-daly/deploys)
+--whatever comes directly after the abstract bg must be z-10, and it must be the highest level div of the component if it is one
 
 ```sh
 npm create astro@latest -- --template blog
