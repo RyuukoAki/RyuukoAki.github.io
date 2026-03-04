@@ -4,47 +4,98 @@ import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
 import { Image } from "astro:assets";
 import ImageBento from "../components/bento/ProjectPageImgBento.astro";
+import SelectImgCard from "../components/preact/selectImgCard.jsx";
 import type { CollectionEntry } from "astro:content";
 
 type ProjectData = CollectionEntry<"projects">["data"];
 
 interface Props {
-	project: ProjectData;
+  project: ProjectData;
 }
 
 const { project } = Astro.props as Props;
+
+const normalizeYoutubeEmbedUrl = (value: string) => {
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return "";
+
+  if (trimmedValue.startsWith("https://www.youtube.com/embed/")) {
+    return trimmedValue;
+  }
+
+  const idFromPath = trimmedValue.match(
+    /(?:youtu\.be\/|youtube\.com\/shorts\/)([^?&/]+)/,
+  )?.[1];
+  if (idFromPath) {
+    return `https://www.youtube.com/embed/${idFromPath}`;
+  }
+
+  const idFromQuery = trimmedValue.match(/[?&]v=([^?&/]+)/)?.[1];
+  if (idFromQuery) {
+    return `https://www.youtube.com/embed/${idFromQuery}`;
+  }
+
+  return trimmedValue;
+};
+
+const youtubeEmbedUrl = project.youtubeEmbed
+  ? normalizeYoutubeEmbedUrl(project.youtubeEmbed)
+  : "";
 ---
 
 <BaseLayout title={project.title}>
-	<AbstractBG slot="hero">
-		<Hero>
-			<h1
-				slot="title"
-				class="py-8 text-5xl font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
-			>
-				{project.title}
-			</h1>
-		</Hero>
-	</AbstractBG>
-	<div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
-		<p class="mx-4">Last Updated: {project.pubDate}</p>
-		<p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
-		<div class="mb-8 mx-auto">
-			<Image src={project.cover} alt={project.coverAlt} />
-		</div>
-	</div>
-	<div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
-		<slot />
-	</div>
-	<ImageBento slot="main">
-		{
-			project.gallery.map((image) => (
-				<div slot="cards" class=" max-w-full  rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
-						<div class="overflow-hidden rounded-xl">
-							<Image src={image.img} alt={image.alt} class="object-cover h-full " /> 
-						</div>
-				</div>
-			))
-		}
-	</ImageBento>
+  <AbstractBG slot="hero">
+    <Hero>
+      <h1
+        slot="title"
+        class="py-8 text-5xl font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
+      >
+        {project.title}
+      </h1>
+    </Hero>
+  </AbstractBG>
+  <div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
+    <p class="mx-4">Last Updated: {project.pubDate}</p>
+    <p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
+    <div class="mb-8 mx-auto rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden">
+      <Image src={project.cover} alt={project.coverAlt} />
+    </div>
+  </div>
+  <div
+    slot="main"
+    class="pb-12 lg:px-32 text-lg text-gray-700 dark:text-gray-300"
+  >
+    <slot />
+  </div>
+  {
+    youtubeEmbedUrl && (
+      <section
+        slot="main"
+        class="lg:px-32 text-lg text-gray-700 dark:text-gray-300 mb-8"
+      >
+        <div class="overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 aspect-video">
+          <iframe
+            src={youtubeEmbedUrl}
+            title={`${project.title} YouTube video`}
+            class="h-full w-full"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
+        </div>
+      </section>
+    )
+  }
+  <ImageBento slot="main">
+    {
+      project.gallery.map((image) => (
+        <div
+          slot="cards"
+          class=" max-w-full  rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 "
+        >
+          <SelectImgCard src={image.img.src} alt={image.alt} client:load />
+        </div>
+      ))
+    }
+  </ImageBento>
 </BaseLayout>

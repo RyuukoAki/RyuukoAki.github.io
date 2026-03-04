@@ -2,23 +2,23 @@
 slug: "spellbound-v2"
 title: "Spellbound V2"
 description: "A remake of the original Spellbound, made in Godot for Advanced Studio. This version features a completely 3D environment, characters and third person perspective, as well as a new spellcasting system and new art assets."
-pubDate: "2026-03-03"
+pubDate: "2026-03"
 status: "Ongoing"
 contributors: ["Ava Daly"]
-cover: "./assets/blog-placeholder-2.jpg"
-coverAlt: "The Astro logo on a dark background with a pink glow."
+cover: "./assets/spellbound2/spellbound2-01.png"
+coverAlt: "A screenshot of Spellbound V2, showing the main character in a 3D environment."
 gallery: [
   {
-    img: "./assets/blog-placeholder-2.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound2/spellbound2-02.png",
+    alt: "A screenshot of Spellbound V2, showing the main character casting a spell."
   },
   {
-    img: "./assets/blog-placeholder-3.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound2/spellbound2-03.png",
+    alt: "A screenshot of Spellbound V2, showing the main character in a different environment."
   },
   {
-    img: "./assets/blog-placeholder-4.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound2/spellbound2-04.png",
+    alt: "A screenshot of Spellbound V2, showing the main character facing a boss enemy."
   }
 ]
 tags: ["godot", "coding", "ongoing", "games"]
