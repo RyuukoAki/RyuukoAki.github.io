@@ -9,40 +9,42 @@ import type { CollectionEntry } from "astro:content";
 type ProjectData = CollectionEntry<"projects">["data"];
 
 interface Props {
-  project: ProjectData;
+	project: ProjectData;
 }
 
 const { project } = Astro.props as Props;
 ---
 
 <BaseLayout title={project.title}>
-  <AbstractBG slot="hero">
-    <Hero>
-      <h1
-        slot="title"
-        class="text-5xl font-bold font-wixdisplay tracking-tight text-balance text-pale-slate sm:text-3xl"
-      >
-        {project.title}
-      </h1>
-    </Hero>
-  </AbstractBG>
-  <div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
-    <p class="mx-4">Last Updated: {project.pubDate}</p>
-    <p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
-    <div class="mb-8 mx-auto">
-      <Image src={project.cover} alt={project.coverAlt} />
-    </div>
-  </div>
-  <slot />
-  <ImageBento>
-    {
-      project.gallery.map((image) => (
-        <div class=" max-w-full rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
-            <div class="overflow-hidden rounded-xl">
-	            <Image src={image.img} alt={image.alt} class="object-cover w-full h-48" /> 
-            </div>
-        </div>
-      ))
-    }
-  </ImageBento>
+	<AbstractBG slot="hero">
+		<Hero>
+			<h1
+				slot="title"
+				class="py-8 text-5xl font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
+			>
+				{project.title}
+			</h1>
+		</Hero>
+	</AbstractBG>
+	<div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
+		<p class="mx-4">Last Updated: {project.pubDate}</p>
+		<p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
+		<div class="mb-8 mx-auto">
+			<Image src={project.cover} alt={project.coverAlt} />
+		</div>
+	</div>
+	<div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
+		<slot />
+	</div>
+	<ImageBento slot="main">
+		{
+			project.gallery.map((image) => (
+				<div slot="cards" class=" max-w-full  rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:ml-0">
+						<div class="overflow-hidden rounded-xl">
+							<Image src={image.img} alt={image.alt} class="object-cover h-full " /> 
+						</div>
+				</div>
+			))
+		}
+	</ImageBento>
 </BaseLayout>

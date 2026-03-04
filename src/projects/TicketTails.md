@@ -9,15 +9,19 @@ cover: "./assets/ticketTailsCover.png"
 coverAlt: "The Astro logo on a dark background with a pink glow."
 gallery: [
   {
-    img: "./assets/blog-placeholder-2.jpg",
+    img: "./assets/ticketTails01.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    img: "./assets/blog-placeholder-3.jpg",
+    img: "./assets/ticketTails02.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    img: "./assets/blog-placeholder-4.jpg",
+    img: "./assets/ticketTails03.gif",
+    alt: "The Astro logo on a dark background with a pink glow."
+  },
+  {
+    img: "./assets/ticketTails04.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   }
 ]
