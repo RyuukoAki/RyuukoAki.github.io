@@ -6,17 +6,22 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
-<html lang="en" class="bg-slate text-gray-900 dark:bg-onyx dark:text-pale-slate antialiased">
+<html
+  lang="en"
+  class="bg-slate text-gray-900 dark:bg-onyx dark:text-pale-slate antialiased"
+>
   <head>
     <meta charset="utf-8" />
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="">
     <Header />
-    <div class="" >
-     <slot name="hero" />
+    <div class="relative z-0">
+      <slot name="hero" />
     </div>
-    <main class="grid place-content-center z-20 mb-8 px-4 sm:px-16 lg:px-32">
+    <main
+      class="relative z-10 grid place-content-center mb-8 px-4 sm:px-16 lg:px-32"
+    >
       <slot name="main" />
     </main>
     <Footer />

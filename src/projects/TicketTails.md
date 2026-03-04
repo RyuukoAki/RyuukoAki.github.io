@@ -5,23 +5,23 @@ description: "Submission for Global Game Jam 2026, made with Godot and C#"
 pubDate: "2026-02-03"
 status: "Ongoing"
 contributors: ["Ava Daly", "Keagan Reider", "Tristan Scott"]
-cover: "./assets/ticketTailsCover.png"
+cover: "./assets/ticketTails/ticketTailsCover.png"
 coverAlt: "The Astro logo on a dark background with a pink glow."
 gallery: [
   {
-    img: "./assets/ticketTails01.gif",
+    img: "./assets/ticketTails/ticketTails01.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    img: "./assets/ticketTails02.gif",
+    img: "./assets/ticketTails/ticketTails02.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    img: "./assets/ticketTails03.gif",
+    img: "./assets/ticketTails/ticketTails03.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   },
   {
-    img: "./assets/ticketTails04.gif",
+    img: "./assets/ticketTails/ticketTails04.gif",
     alt: "The Astro logo on a dark background with a pink glow."
   }
 ]

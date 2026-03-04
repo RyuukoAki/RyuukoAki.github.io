@@ -21,6 +21,7 @@ gallery: [
     alt: "The Astro logo on a dark background with a pink glow."
   }
 ]
+youtubeEmbed: "https://youtu.be/aMRe4KuIyBc"
 tags: ["astro", "coding", "ongoing", "web"]
 ---
 
