@@ -1,15 +1,23 @@
-<div class="-z-10 relative isolate px-6 pt-14 lg:px-8">
-	<div aria-hidden="true" class=" absolute inset-x-0 -top-40 -z-20 transform-gpu  blur-3xl">
-		<div
-			style="clip-path: polygon(100% 56%, 91% 70%, 97% 87%, 78% 100%, 55% 96%, 41% 80%, 12% 86%, 11% 64%, 0 43%, 14% 36%, 20% 15%, 41% 26%, 59% 26%, 74% 18%, 100% 0, 93% 37%);"
-			class="relative left-[calc(40%-30rem)] w-288.75 aspect-9/4 -translate-x-2/5 translate-y-75 -rotate-15 bg-linear-to-r from-wine-60 to-cherry-20 opacity-60 dark:from-wine-20 dark:to-cherry-60  ">
-		</div>
-	</div>
-	<slot />
-	<div aria-hidden="true" class="absolute inset-x-0 -z-20 transform-gpu overflow-x-hidden blur-3xl top-[calc(100%-30rem)]">
-		<div 
-			style="clip-path: polygon(98% 64%, 80% 65%, 90% 95%, 63% 82%, 50% 97%, 34% 79%, 3% 86%, 17% 55%, 0 43%, 19% 26%, 4% 6%, 23% 13%, 52% 0, 73% 18%, 99% 5%, 89% 41%);"
-			class="relative aspect-9/4  left-[calc(50%+36rem)] w-288.75 -translate-x-2/3  bg-linear-to-tr from-wine-60 to-cherry-20 opacity-50 dark:from-wine-20 dark:to-cherry-60  ">
-		</div>
-	</div>
+<div class="relative isolate px-6 pt-14 lg:px-8">
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 -top-40 -z-20 transform-gpu blur-3xl"
+  >
+    <div
+      style="clip-path: polygon(100% 56%, 91% 70%, 97% 87%, 78% 100%, 55% 96%, 41% 80%, 12% 86%, 11% 64%, 0 43%, 14% 36%, 20% 15%, 41% 26%, 59% 26%, 74% 18%, 100% 0, 93% 37%);"
+      class="relative left-[calc(40%-30rem)] w-288.75 aspect-9/4 -translate-x-2/5 translate-y-75 -rotate-15 bg-linear-to-r from-wine-60 to-cherry-20 opacity-60 dark:from-wine-20 dark:to-cherry-60"
+    >
+    </div>
+  </div>
+  <slot />
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 -z-20 transform-gpu overflow-x-hidden blur-3xl top-[calc(100%-30rem)]"
+  >
+    <div
+      style="clip-path: polygon(98% 64%, 80% 65%, 90% 95%, 63% 82%, 50% 97%, 34% 79%, 3% 86%, 17% 55%, 0 43%, 19% 26%, 4% 6%, 23% 13%, 52% 0, 73% 18%, 99% 5%, 89% 41%);"
+      class="relative aspect-9/4 left-[calc(50%+36rem)] w-288.75 -translate-x-2/3 bg-linear-to-tr from-wine-60 to-cherry-20 opacity-50 dark:from-wine-20 dark:to-cherry-60"
+    >
+    </div>
+  </div>
 </div>
