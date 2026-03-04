@@ -5,20 +5,28 @@ description: "An isometric rogue-like game made in Godot for Game Design Theory 
 pubDate: "2024-04"
 status: "Ongoing"
 contributors: ["Ava Daly", "JJ Llorin", "Maddison Whelpley", "Ivy Heal"]
-cover: "./assets/blog-placeholder-2.jpg"
-coverAlt: "The Astro logo on a dark background with a pink glow."
+cover: "./assets/spellbound1/spellbound1Cover.png"
+coverAlt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
 gallery: [
   {
-    img: "./assets/blog-placeholder-2.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound1/spellbound1-0.png",
+    alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
   },
   {
-    img: "./assets/blog-placeholder-3.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound1/spellbound1-01.png",
+    alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
   },
   {
-    img: "./assets/blog-placeholder-4.jpg",
-    alt: "The Astro logo on a dark background with a pink glow."
+    img: "./assets/spellbound1/spellbound1-02.png",
+    alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
+  },
+    {
+    img: "./assets/spellbound1/spellbound1-03.png",
+    alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
+  },
+    {
+    img: "./assets/spellbound1/spellbound1-04.png",
+    alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
   }
 ]
 tags: ["godot", "coding", "ongoing", "games"]

@@ -3,26 +3,26 @@ slug: "ticket-tails"
 title: "Ticket Tails"
 description: "Submission for Global Game Jam 2026, made with Godot and C#"
 pubDate: "2026-02-03"
-status: "Ongoing"
+status: "Completed"
 contributors: ["Ava Daly", "Keagan Reider", "Tristan Scott"]
 cover: "./assets/ticketTails/ticketTailsCover.png"
-coverAlt: "The Astro logo on a dark background with a pink glow."
+coverAlt: "A banner design for Ticket Tails, showing three raccoons in a trench coat with the title of the game in bold letters above them."
 gallery: [
   {
     img: "./assets/ticketTails/ticketTails01.gif",
-    alt: "The Astro logo on a dark background with a pink glow."
+    alt: "A screenshot of Ticket Tails, showing three raccoons in a trench coat sneaking past a security guard."
   },
   {
     img: "./assets/ticketTails/ticketTails02.gif",
-    alt: "The Astro logo on a dark background with a pink glow."
+    alt: "A screenshot of Ticket Tails, showing the raccoons solving a puzzle to scrounge up money for tickets."
   },
   {
     img: "./assets/ticketTails/ticketTails03.gif",
-    alt: "The Astro logo on a dark background with a pink glow."
+    alt: "A screenshot of Ticket Tails, showing the raccoons avoiding security guards in a different level."
   },
   {
     img: "./assets/ticketTails/ticketTails04.gif",
-    alt: "The Astro logo on a dark background with a pink glow."
+    alt: "A screenshot of Ticket Tails, showing the raccoons in a different level with new obstacles."
   }
 ]
 tags: ["games", "ggj", "2026", "godot", "c#"]
