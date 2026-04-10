@@ -2,20 +2,21 @@
 // src/pages/contact.astro
 import "../styles/global.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SplitHero from '../components/hero/HeroSplit.astro';
+import Hero from '../components/hero/HeroCentered.astro';
 import AbstractBG from "../components/bg/AbstractBG4.astro";
 ---
 <BaseLayout title="Contact">
 	<AbstractBG slot="hero">
-		<SplitHero>
-			<h1 slot="Heading" class="mt-2 text-4xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-5xl">Contact Ava</h1>
-			<p slot="description" class="mt-6 text-lg/8 text-gray-300">She'd love to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to reach out.</p>
+		<Hero>
+			<h1 slot="title" class="mt-2 text-4xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-5xl">Contact Ava</h1>
+			<h3 slot="subtitle" class="mt-6 text-2xl font-wixdisplay tracking-tight text-pretty text-pale-slate sm:text-3xl">I'd love to hear from you!</h3>
+			<p slot="description" class="mt-6 text-lg text-gray-300">Whether you have a question, a project idea, or just want to say hello, feel free to reach out.</p>
 			<div slot="actions" class="mt-10 flex items-center gap-x-6">
-				<a href="mailto:nvrzdvj0a@mozmail.com" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-m font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+				<a href="mailto:nvrzdvj0a@mozmail.com" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-lg text-center font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
 					Send an Email</a>
-				<a href="https://www.linkedin.com/in/ava-daly/" class="flex rounded-3xl bg-pale-slate px-3.5 py-2.5 text-m font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry" target="_blank" rel="noopener noreferrer">
+				<a href="https://www.linkedin.com/in/ava-daly/" class="flex rounded-3xl bg-pale-slate px-3.5 py-2.5 text-lg text-center font-semibold text-wine shadow-xs hover:bg-slate-30 hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry" target="_blank" rel="noopener noreferrer">
 					Connect on LinkedIn</a>
 			</div>
-		</SplitHero>
+		</Hero>
 	</AbstractBG>
 </BaseLayout>
