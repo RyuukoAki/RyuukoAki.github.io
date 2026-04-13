@@ -1,46 +1,6 @@
 # Astro Portfolio site
 
---whatever comes directly after the abstract bg must be z-10, and it must be the highest level div of the component if it is one
-
-```sh
-npm create astro@latest -- --template blog
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
+Welcome to my lovely portfolio, built with Astro, TailwindCSS, and a dash of Preact. Hopefully I remember to updat literally anything in this readme at some point, but for now, here are some notes on the project, and what future me might need to remember about it.
 
 ## 🧞 Commands
 
@@ -55,10 +15,95 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🗂 Current File tree
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+📦src
+┣ assets
+┃ ┣ Iris.jpg
+┃ ┗ Sable.jpg
+┣ components
+┃ ┣ bento
+┃ ┃ ┣ ProjectListBento.astro
+┃ ┃ ┗ ProjectPageImgBento.astro
+┃ ┣ bg
+┃ ┃ ┣ AbstractBG.astro
+┃ ┃ ┣ AbstractBG2.astro
+┃ ┃ ┣ AbstractBG3.astro
+┃ ┃ ┣ AbstractBG4.astro
+┃ ┃ ┣ AbstractBG5.astro
+┃ ┃ ┣ AbstractBGCondensed.astro
+┃ ┃ ┗ shapes.txt
+┃ ┣ cards
+┃ ┃ ┣ ProjectCardBase.astro
+┃ ┃ ┣ ProjectCardPlaceholder.astro
+┃ ┃ ┗ projectPageImageBentoCard.astro
+┃ ┣ hero
+┃ ┃ ┣ HeroCentered.astro
+┃ ┃ ┣ HeroCenteredCondensed.astro
+┃ ┃ ┣ HeroProjectImg.astro
+┃ ┃ ┗ HeroSplit.astro
+┃ ┣ navheader
+┃ ┃ ┣ Header.astro
+┃ ┃ ┗ HeaderLink.astro
+┃ ┣ preact
+┃ ┃ ┗ selectImgCard.jsx
+┃ ┣ BaseHead.astro
+┃ ┣ Footer.astro
+┃ ┗ FormattedDate.astro
+┣ layouts
+┃ ┣ BaseLayout.astro
+┃ ┗ ProjectPageLayout.astro
+┣ pages
+┃ ┣ projects
+┃ ┃ ┗ [...slug].astro
+┃ ┣ about.astro
+┃ ┣ contact.astro
+┃ ┣ index.astro
+┃ ┣ projects.astro
+┃ ┗ rss.xml.js
+┣ projects
+┃ ┣ assets
+┃ ┃ ┣ paperTrails
+┃ ┃ ┃ ┣ paperTrails01.png
+┃ ┃ ┃ ┣ paperTrails02.png
+┃ ┃ ┃ ┣ paperTrails03.png
+┃ ┃ ┃ ┣ paperTrails04.png
+┃ ┃ ┃ ┗ paperTrailsCover.webp
+┃ ┃ ┣ portfolio
+┃ ┃ ┃ ┣ portfolio01.png
+┃ ┃ ┃ ┗ portfolioCover.webp
+┃ ┃ ┣ sabusaurus
+┃ ┃ ┃ ┣ sabu01.png
+┃ ┃ ┃ ┣ sabu02.png
+┃ ┃ ┃ ┗ sabuCover.png
+┃ ┃ ┣ spellbound1
+┃ ┃ ┃ ┣ spellbound1-0.png
+┃ ┃ ┃ ┣ spellbound1-01.png
+┃ ┃ ┃ ┣ spellbound1-02.png
+┃ ┃ ┃ ┣ spellbound1-03.png
+┃ ┃ ┃ ┣ spellbound1-04.png
+┃ ┃ ┃ ┗ spellbound1Cover.png
+┃ ┃ ┣ spellbound2
+┃ ┃ ┃ ┣ spellbound2-02.png
+┃ ┃ ┃ ┣ spellbound2-03.png
+┃ ┃ ┃ ┣ spellbound2-04.png
+┃ ┃ ┃ ┣ spellbound2-05.png
+┃ ┃ ┃ ┣ spellbound2-06.png
+┃ ┃ ┃ ┣ spellbound2-07.png
+┃ ┃ ┃ ┗ spellbound2-cover.png
+┃ ┃ ┗ ticketTails
+┃ ┃ ┃ ┣ ticketTails01.gif
+┃ ┃ ┃ ┣ ticketTails02.gif
+┃ ┃ ┃ ┣ ticketTails03.gif
+┃ ┃ ┃ ┣ ticketTails04.gif
+┃ ┃ ┃ ┗ ticketTailsCover.png
+┃ ┣ PaperTrails.md
+┃ ┣ portfolio_site.md
+┃ ┣ sabusarus.md
+┃ ┣ Spellbound-V1.md
+┃ ┣ Spellbound-V2.md
+┃ ┗ TicketTails.md
+┣ styles
+┃ ┗ global.css
+┣ consts.ts
+┗ content.config.ts

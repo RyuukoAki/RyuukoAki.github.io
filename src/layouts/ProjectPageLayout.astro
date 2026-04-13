@@ -54,48 +54,49 @@ const youtubeEmbedUrl = project.youtubeEmbed
       </h1>
     </Hero>
   </AbstractBG>
-  <div slot="main" class="lg:px-32 text-lg text-gray-700 dark:text-gray-300">
-    <p class="mx-4">Last Updated: {project.pubDate}</p>
-    <p class="mx-4">Contributors: {project.contributors.join(",  ")}</p>
-    <div class="mb-8 mx-auto rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden 2xl:mx-16">
-      <Image src={project.cover} alt={project.coverAlt} />
-    </div>
-  </div>
-  <div
-    slot="main"
-    class="pb-12 lg:px-32 text-lg text-gray-700 dark:text-gray-300"
-  >
+  <div slot="main" class=" text-lg text-onyx dark:text-pale-slate">
+    <div class=" mx-auto rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden xl:mx-16">
+      <Image src={project.cover} alt={project.coverAlt} class="w-full h-auto"/>
+    </div></div>
+    <p slot="main" class="font-mono mt-4 lg:px-16 xl:px-32">Last Updated: {project.pubDate}</p>
+    <p slot="main" class="font-mono mb-8 lg:px-16 xl:px-32">Contributors: {project.contributors.join(",  ")}</p>
+
+    <div slot="main" class="pb-12 lg:px-16 xl:px-32 text-lg text-onyx dark:text-pale-slate">
     <slot />
-  </div>
-  {
-    youtubeEmbedUrl && (
-      <section
-        slot="main"
-        class="lg:px-32 text-lg text-gray-700 dark:text-gray-300 mb-8"
-      >
-        <div class="overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 aspect-video">
-          <iframe
-            src={youtubeEmbedUrl}
-            title={`${project.title} YouTube video`}
-            class="h-full w-full"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          />
-        </div>
-      </section>
-    )
-  }
-  <ImageBento slot="main">
+    </div>
     {
-      project.gallery.map((image) => (
-        <div
-          slot="cards"
-          class=" max-w-full  rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 "
+      youtubeEmbedUrl && (
+        <section
+          slot="main"
+          class="lg:px-16 xl:px-32 text-lg text-onyx dark:text-pale-slate mb-8"
         >
-          <SelectImgCard src={image.img.src} alt={image.alt} client:load />
-        </div>
-      ))
+          <div class="overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 aspect-video">
+            <iframe
+              src={youtubeEmbedUrl}
+              title={`${project.title} YouTube video`}
+              class="h-full w-full"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            />
+          </div>
+        </section>
+      )
     }
-  </ImageBento>
+    <ImageBento slot="main">
+      {
+        project.gallery.map((image) => (
+          <div
+            slot="cards"
+            class="max-w-full  rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 "
+          >
+            <SelectImgCard src={image.img.src} alt={image.alt} client:load />
+          </div>
+        ))
+      }
+    </ImageBento>
+  <div slot="main">
+    <br/>
+    <p class="font-mono">Tags: {project.tags.join(", ")}</p>
+  </div>
 </BaseLayout>

@@ -25,7 +25,7 @@ gallery: [
     alt: "A screenshot of Ticket Tails, showing the raccoons in a different level with new obstacles."
   }
 ]
-tags: ["games", "ggj", "2026", "godot", "c#"]
+tags: ["games", "GGJ", "2026", "godot", "c#", "completed", "animation"]
 ---
 
 For Global Game Jam 2026, our team of three created *Ticket Tails*, a game about three raccoons in a trench coat trying to sneak into a movie theatre. The game is a 2D sidescroller where up to three players can control raccoons as they try to avoid security guards and solve puzzles to scrounge up enough money to buy tickets to the theatre. 

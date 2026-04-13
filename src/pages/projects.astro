@@ -6,10 +6,13 @@ import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
 import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-const allProjects: CollectionEntry<"projects">[] =
-  await getCollection("projects");
+
+import { getCollection, type CollectionEntry } from "astro:content";
+const allProjects: CollectionEntry<"projects">[] = (
+  await getCollection("projects")
+).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 ---
 
 <BaseLayout title="Projects">
