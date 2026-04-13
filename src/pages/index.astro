@@ -4,16 +4,8 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBG.astro";
 import Hero from "../components/hero/HeroCentered.astro";
-import ProjectListBento from "../components/bento/ProjectListBento.astro";
-import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
+import RecentProjectBento from '../components/bento/RecentProjectsBento.astro';
 
-import { getCollection, type CollectionEntry } from "astro:content";
-const allProjects: CollectionEntry<"projects">[] = (
-  await getCollection("projects")
-).sort(
-  (a, b) =>
-    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
-);
 ---
 
 <BaseLayout title="Home">
@@ -21,7 +13,7 @@ const allProjects: CollectionEntry<"projects">[] = (
     <Hero>
       <h1
         slot="title"
-        class="font-black tracking-tight text-balance text-onyx-20 dark:text-pale-slate"
+        class="mt-16 font-black tracking-tight text-balance text-onyx-20 dark:text-pale-slate"
       >
         Ava Daly
       </h1>
@@ -29,11 +21,11 @@ const allProjects: CollectionEntry<"projects">[] = (
         slot="subtitle"
         class="font-wix font-light tracking-tight text-balance text-onyx-20 dark:text-pale-slate-90"
       >
-        Creative Industry PM
+        Creative Industry Project Manager
       </h2>
       <p
         slot="description"
-        class="font-wix mt-8 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60"
+        class="font-wix mt-4 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60"
       >
         Creating. Aligning. Inspiring.
       </p>
@@ -55,9 +47,9 @@ const allProjects: CollectionEntry<"projects">[] = (
   </AbstractBG>
   <div
     slot="main"
-    class="z-10 p-8 rounded-xl shadow-xl ring-1 ring-onyx-20/20 bg-onyx-50/10 dark:shadow-onyx-20 dark:shadow-md dark:ring-slate-20/60 dark:bg-wine-30/10 lg:mx-32"
+    class="p-8 mt-32 rounded-2xl shadow-2xl bg-pale-slate/10 dark:bg-slate/10 lg:mx-32"
   >
-    <h1 class="text-2xl font-wix text-pink-wine-40 font-bold">
+    <h1 class="text-3xl font-wix text-pink-wine-50 font-bold">
       Strength Behind Craft
     </h1>
     <p
@@ -80,7 +72,7 @@ const allProjects: CollectionEntry<"projects">[] = (
       to launch, I bring both strategic vision and hands-on logistics to projects
       of any scale. <br /><br />
     </p>
-    <p class="pb-5">Let's talk about how I can support your next project.</p>
+    <p class="pb-5">Let's talk about how I can support your next project!</p>
     <div class="flex gap-4 flex-wrap">
       <a
         href="/contact"
@@ -97,25 +89,5 @@ const allProjects: CollectionEntry<"projects">[] = (
     </div>
   </div>
 
-  <ProjectListBento slot="main">
-    <h2 class="rounded-2xl p-8 bg-pale-slate/10 mb-4" slot="title">
-      Recent Projects
-    </h2>
-    <a
-      slot="title"
-      href="/projects"
-      class="rounded-2xl bg-onyx-10/10 px-3.5 py-2 font-noto text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
-    >
-      Browse All Projects<span aria-hidden="true">→</span></a
-    >
-    {
-      allProjects.map((project: any) => (
-        <ProjectCardBase
-          slot="cards"
-          href={`/projects/${project.id}/`}
-          project={project.data}
-        />
-      ))
-    }
-  </ProjectListBento>
+  <RecentProjectBento slot="main" />
 </BaseLayout>

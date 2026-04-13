@@ -1,0 +1,33 @@
+---
+import ProjectListBento from "./ProjectListBento.astro";
+import ProjectCardBase from "../cards/ProjectCardBase.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+const allProjects: CollectionEntry<"projects">[] = (
+  await getCollection("projects")
+).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+);
+---
+<ProjectListBento>
+    <h2 class="rounded-2xl px-8 py-4 bg-pale-slate/20 dark:bg-slate/20 mb-4 shadow-2xl" slot="title">
+        Recent Projects
+    </h2>
+    <a
+        slot="title"
+        href="/projects"
+        class="rounded-2xl bg-pale-slate/10 px-3.5 py-2 font-noto text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+    >
+        Browse All Projects<span aria-hidden="true">→</span></a
+    >
+    {
+        allProjects.map((project: any) => (
+        <ProjectCardBase
+            slot="cards"
+            href={`/projects/${project.id}/`}
+            project={project.data}
+        />
+        ))
+    }
+</ProjectListBento>

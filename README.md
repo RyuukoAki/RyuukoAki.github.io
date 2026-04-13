@@ -2,6 +2,8 @@
 
 Welcome to my lovely portfolio, built with Astro, TailwindCSS, and a dash of Preact. Hopefully I remember to updat literally anything in this readme at some point, but for now, here are some notes on the project, and what future me might need to remember about it.
 
+-- For the project pages, at the bottom should add a project bento that only pulls projects with overlaping tags, titled related projects. don't know exactly how I'd do that quite yet but thats what docs are for.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

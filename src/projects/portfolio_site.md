@@ -5,13 +5,25 @@ description: "This site, made with Astro, TailwindCSS, Preact, and Github pages"
 pubDate: "2026-03"
 status: "Ongoing"
 contributors: ["Ava Daly"]
-cover: "./assets/portfolio/portfolioCover.webp"
+cover: "./assets/portfolio/PortfolioHomeDark.png"
 coverAlt: "Screenshot of the Home page of the portfolio site, showing a pink and black background with white text and a navigation bar at the top."
 gallery: [
+    {
+    img: "./assets/portfolio/PortfolioHomeDark.png",
+    alt: "Screenshot of the Home page of the portfolio site, showing a pink and black background with white text and a navigation bar at the top."
+  },
   {
-    img: "./assets/portfolio/portfolio01.png",
+    img: "./assets/portfolio/PortfolioHomeLight.png",
+    alt: "Screenshot of the Home page of the portfolio site, showing a pink and grey background with dark text and a navigation bar at the top."
+  },
+    {
+    img: "./assets/portfolio/PortfolioAboutDark.png",
     alt: "Screenshot of the About page of the portfolio site, showing a pink and black background with white text and a navigation bar at the top."
   },
+    {
+    img: "./assets/portfolio/PortfolioAboutLight.png",
+    alt: "Screenshot of the About page of the portfolio site, showing a pink and grey background with light text, photos of cats, and a navigation bar at the top."
+  }
 ]
 tags: ["Astro", "coding", "ongoing", "web", "TailwindCSS", "Preact", "Github"]
 ---
