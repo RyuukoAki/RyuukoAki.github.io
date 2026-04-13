@@ -26,7 +26,7 @@ gallery: [
   }
 ]
 youtubeEmbed: "https://youtu.be/aMRe4KuIyBc"
-tags: ["3DSMax", "modeling", "completed", "animation"]
+tags: ["3DSMax", "modeling", "completed", "animation", "origami"]
 ---
 
  _Paper Trails_ is an animated short made in 3D Studio Max for _3D Modeling and Animation._ It follows the story of an origami dragon who falls from a desk and is threatened by a terrifying monster known as the *vacuum*. The animation was created by first modeling the dragon and the vacuum in 3D Studio Max, and then animating them using keyframes.<br /><br /> 

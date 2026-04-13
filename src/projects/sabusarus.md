@@ -18,7 +18,7 @@ gallery: [
   }
 ]
 youtubeEmbed: "https://youtu.be/ZA-tjUcVuS8?si=EBApXWlcDHptm-0a"
-tags: ["animation", "coding", "complete", "web"]
+tags: ["animation", "cats", "completed", "rotoscoping", "photoshop", "Sable"]
 ---
 
 *Sabu-Sarus Rex* is a short Rotoscoped animation made in Adobe Photoshop for the course *New Media 1010 - Introduction to Animation.* The animation shows the transformation of my cat, Sable, into a dinosaur. The animation was created by first filming Sable drinking from a glass and then tracing over the footage frame by frame to create the final animation. The animation was a great learning experience, and while I don't intend to continue with this style of animation, I enjoyed the opportunity to experiment with it.

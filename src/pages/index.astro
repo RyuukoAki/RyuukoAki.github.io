@@ -7,49 +7,62 @@ import Hero from "../components/hero/HeroCentered.astro";
 import ProjectListBento from "../components/bento/ProjectListBento.astro";
 import ProjectCardBase from "../components/cards/ProjectCardBase.astro";
 
-import { getCollection } from "astro:content";
-const allProjects = await getCollection("projects");
+import { getCollection, type CollectionEntry } from "astro:content";
+const allProjects: CollectionEntry<"projects">[] = (
+  await getCollection("projects")
+).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+);
 ---
 
 <BaseLayout title="Home">
   <AbstractBG slot="hero">
     <Hero>
-      <h1 slot="title" class="font-black tracking-tight text-balance text-onyx-20 dark:text-pale-slate ">
+      <h1
+        slot="title"
+        class="font-black tracking-tight text-balance text-onyx-20 dark:text-pale-slate"
+      >
         Ava Daly
       </h1>
       <h2
         slot="subtitle"
-        class="font-wix font-light tracking-tight text-balance text-onyx-20 dark:text-pale-slate-90 "
+        class="font-wix font-light tracking-tight text-balance text-onyx-20 dark:text-pale-slate-90"
       >
         Creative Industry PM
       </h2>
       <p
         slot="description"
-        class="font-wix mt-8 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60 "
+        class="font-wix mt-8 text-lg font-light text-pretty text-onyx-30 dark:text-onyx-60"
       >
         Creating. Aligning. Inspiring.
       </p>
       <a
-      slot="actions"
+        slot="actions"
         href="/contact"
-        class=" rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+        class="rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm hover:scale-120 transition-transform duration-300 hover:bg-cherry hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
       >
         Contact</a
       >
       <a
         slot="actions"
         href="/projects"
-        class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+        class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:scale-110 transition-transform duration-300 hover:bg-pink-wine hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
       >
         Browse Projects<span aria-hidden="true">→</span></a
       >
     </Hero>
   </AbstractBG>
-  <div slot="main" class="z-10 p-8 rounded-xl shadow-xl ring-1 ring-onyx-20/20 bg-onyx-50/10 dark:shadow-onyx-20 dark:shadow-md dark:ring-slate-20/60 dark:bg-wine-30/10 lg:mx-32">
+  <div
+    slot="main"
+    class="z-10 p-8 rounded-xl shadow-xl ring-1 ring-onyx-20/20 bg-onyx-50/10 dark:shadow-onyx-20 dark:shadow-md dark:ring-slate-20/60 dark:bg-wine-30/10 lg:mx-32"
+  >
     <h1 class="text-2xl font-wix text-pink-wine-40 font-bold">
       Strength Behind Craft
     </h1>
-    <p class=" font-noto mt-4 text-md text-balance text-onyx dark:text-pale-slate">
+    <p
+      class="font-noto mt-4 text-md text-balance text-onyx dark:text-pale-slate"
+    >
       I'm a digital projects manager specializing in indie games. I keep
       artists, programmers, budgets, and timelines aligned so your team can stay
       in flow and focus on their craft.<br /><br />
@@ -68,16 +81,16 @@ const allProjects = await getCollection("projects");
       of any scale. <br /><br />
     </p>
     <p class="pb-5">Let's talk about how I can support your next project.</p>
-    <div class ="flex gap-4 flex-wrap">
+    <div class="flex gap-4 flex-wrap">
       <a
         href="/contact"
-        class=" rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+        class="rounded-3xl bg-pale-slate/90 px-3.5 py-2.5 font-bold text-wine shadow-sm hover:scale-110 transition-transform duration-300 hover:bg-cherry hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
       >
         Get in Touch</a
       >
       <a
         href="/projects"
-        class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+        class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:scale-110 transition-transform duration-300 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
       >
         Browse Previous Works<span aria-hidden="true">→</span></a
       >
@@ -85,13 +98,13 @@ const allProjects = await getCollection("projects");
   </div>
 
   <ProjectListBento slot="main">
-    <h2 class=" rounded-2xl p-8 bg-pale-slate/10" slot="title">
+    <h2 class="rounded-2xl p-8 bg-pale-slate/10 mb-4" slot="title">
       Recent Projects
     </h2>
     <a
       slot="title"
       href="/projects"
-      class="rounded-3xl bg-onyx-10/10 px-3.5 py-2.5 font-regular text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
+      class="rounded-2xl bg-onyx-10/10 px-3.5 py-2 font-noto text-pink-wine shadow-xs dark:text-pale-slate/80 hover:bg-pink-wine hover:text-cherry-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cherry"
     >
       Browse All Projects<span aria-hidden="true">→</span></a
     >

@@ -21,10 +21,10 @@ export default function SelectImgCard({ src, alt = "Project image" }) {
 			<button
 				type="button"
 				onClick={() => setIsOpen(true)}
-				className="block w-full overflow-hidden rounded-xl ring-1 ring-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-70"
+				className="block aspect-video w-full overflow-hidden rounded-xl bg-onyx-10/25 ring-1 ring-white/10 transition-transform duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-70"
 				aria-label={`Open larger image: ${alt}`}
 			>
-				<img src={src} alt={alt} className="h-full w-full object-cover" loading="lazy" />
+				<img src={src} alt={alt} className="h-full w-full object-contain" loading="lazy" />
 			</button>
 
 			{isOpen && (
@@ -46,7 +46,7 @@ export default function SelectImgCard({ src, alt = "Project image" }) {
 						<img
 							src={src}
 							alt={alt}
-							className="max-h-[90vh] max-w-[90vw] rounded-xl shadow-xl"
+							className="max-h-[90vh] max-w-[90vw] rounded-xl bg-onyx-10 shadow-xl ring-1 ring-white/10"
 						/>
 					</div>
 				</div>

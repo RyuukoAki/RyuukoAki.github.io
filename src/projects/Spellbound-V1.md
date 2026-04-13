@@ -3,7 +3,7 @@ slug: "spellbound-v1"
 title: "Spellbound V1"
 description: "An isometric rogue-like game made in Godot for Game Design Theory and Practice"
 pubDate: "2024-04"
-status: "Ongoing"
+status: "Completed"
 contributors: ["Ava Daly", "JJ Llorin", "Maddison Whelpley", "Ivy Heal"]
 cover: "./assets/spellbound1/spellbound1Cover.png"
 coverAlt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
@@ -29,9 +29,9 @@ gallery: [
     alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
   }
 ]
-tags: ["godot", "coding", "ongoing", "games"]
+tags: ["Godot", "coding", "games", "completed", "game design", "origami"]
 ---
 
 *Spellbound* was the final project of the course *Game Design Theory and Practice*, where students in groups of four were tasked with creating a game that portrayed randomly drawn values. <br/><br/>
 *Spellbound* is an isometric rogue-like where the player-- playing as a wizard's aprentice-- must collect pages for their spellbook by defeating the origami creatures that have come to life from the pages of other spellbooks. with each new page collected, the player can learn a new spell, which they can use to defeat the enemies and progress through the levels. The game features a variety of spells, each with their own unique effects, as well as a simple enemy AI and a basic level design. <br/><br/>
-*Spellbound* is no longer being developed, however it was great learning experience and I am excited to be working on a remake for *Advanced Studio*.
+*Spellbound* is no longer being developed, however it was great learning experience and I am excited to be working on a remake for *Advanced Studio*. More information on the remake can be found in the project entry [***Spellbound V2***](./spellbound-v2).
