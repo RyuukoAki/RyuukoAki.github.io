@@ -1,34 +1,93 @@
 ---
 // src/pages/about.astro
 import "../styles/global.css";
-import BaseLayout from '../layouts/BaseLayout.astro';
-import SplitHero from '../components/hero/HeroSplit.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SplitHero from "../components/hero/HeroSplit.astro";
 import AbstractBG from "../components/bg/AbstractBG2.astro";
-import { Image } from 'astro:assets';
-import sableimage from '../assets/Sable.jpg';
-import irisImage from '../assets/Iris.jpg';
+import { Image } from "astro:assets";
+import sableimage from "../assets/Sable.jpg";
+import irisImage from "../assets/Iris.jpg";
 ---
+
 <BaseLayout title="About">
-	<AbstractBG slot="hero">
-		<SplitHero>
-			<h1 slot="Heading" class="mt-2 text-4xl font-wix tracking-tight text-pretty text-pale-slate dark:text-pale-slate ">About Ava</h1>
-			<p slot="description" class="font-noto mt-6 text-lg/6  text-pale-slate dark:text-pale-slate">
-				Hiya! I am a creative project manager specializing in digital games. <br /><br /> 
-				I enjoy playing games, crafting with my hands, and listening to house, EDM, and alternative rock music. <br /><br />
-				Socially, I like playing Magic: the Gathering and spending time with my cats, Sable and Iris.
-			</p>
-			<div slot="actions" class="mt-10 flex items-center gap-x-6">
-				<a slot="actions" href="/contact" class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:scale-110 transition-transform duration-300  hover:bg-cherry hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-        Contact</a>
-        <a slot="actions" href="/projects" class="rounded-3xl py-2.5 px-3.5 text-sm font-semibold text-onyx dark:text-pale-slate  hover:bg-wine hover:text-pale-slate hover:scale-110 transition-transform duration-300">
-          Browse Projects<span aria-hidden="true">→</span></a>
-			</div>
-			<div slot="frame" class="w-full">
-				<Image src={sableimage} alt="Picture of Ava's cat, Sable" class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg" />
-			</div>
-			<div slot="frame" class="w-full ">
-				<Image src={irisImage} alt="Picture of Ava's cat, Iris" class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg" />
-			</div>
-		</SplitHero>
-	</AbstractBG>
+  <AbstractBG slot="hero">
+    <SplitHero>
+      <h1
+        slot="Heading"
+        class="mt-2 text-4xl font-wix tracking-tight text-pretty text-pale-slate dark:text-pale-slate"
+      >
+        About Ava
+      </h1>
+      <p
+        slot="description"
+        class="font-noto mt-6 text-lg/6 text-pale-slate dark:text-pale-slate"
+      >
+        Hiya! I am a creative project manager specializing in digital games. <br
+        /><br />
+        I enjoy playing games, crafting with my hands, and listening to house, EDM,
+        and alternative rock music. <br /><br />
+        Socially, I like playing Magic: the Gathering and spending time with my cats,
+        Sable and Iris.
+      </p>
+      <div slot="actions" class="mt-10 flex items-center gap-x-6">
+        <a
+          slot="actions"
+          href="/contact"
+          class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:scale-110 transition-transform duration-300 hover:bg-cherry hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+        >
+          Contact</a
+        >
+        <a
+          slot="actions"
+          href="/projects"
+          class="rounded-3xl py-2.5 px-3.5 text-sm font-semibold text-onyx dark:text-pale-slate hover:bg-wine hover:text-pale-slate hover:scale-110 transition-transform duration-300"
+        >
+          Browse Projects<span aria-hidden="true">→</span></a
+        >
+      </div>
+      <div slot="frame" class="w-full">
+        <Image
+          src={sableimage}
+          alt="Picture of Ava's cat, Sable"
+          class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg"
+        />
+      </div>
+      <div slot="frame" class="w-full">
+        <Image
+          src={irisImage}
+          alt="Picture of Ava's cat, Iris"
+          class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg"
+        />
+      </div>
+    </SplitHero>
+  </AbstractBG>
+  <div
+    slot="main"
+    class="p-8 mt-32 rounded-2xl shadow-2xl bg-pale-slate/10 dark:bg-slate/10 lg:mx-32"
+  >
+    <h1 class="font-wix text-pink-wine-50 font-bold">
+      Stuff I've Been Featured In:
+    </h1>
+    <h2
+      class="text-onyx dark:text-pale-slate hover:scale-103 transition-transform duration-300 hover:text-cherry-80"
+    >
+      <a
+        href="https://stories.ulethbridge.ca/p/e6227e71-0f08-451c-bb9d-8f92ecc97a90/?member_status=free"
+        target="blank">Coffee, class and crossing continents with Ava Daly</a>
+    </h2>
+    <p
+      class="font-noto mt-4 text-md text-balance text-onyx dark:text-pale-slate"
+    >
+      At the begining of my last semester in university, I was asked if I'd be
+      willing to share part of my educational journey. The Dhillon School of
+      Business published
+      <a
+        href="https://stories.ulethbridge.ca/p/e6227e71-0f08-451c-bb9d-8f92ecc97a90/?member_status=free"
+        target="blank"
+        class="font-regular text-pink-wine dark:text-cherry-60 hover:scale-110 transition-transform duration-300 hover:text-cherry-80"
+        >this
+      </a>
+      article highlighting some of what I have acomplished during my degree.
+    </p>
+  </div>
 </BaseLayout>
