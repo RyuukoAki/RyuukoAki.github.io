@@ -112,6 +112,14 @@
   }
 } 
 
+.prose a{
+  @apply text-blue-500 no-underline font-medium transition-colors duration-200;
+}
+
+.prose a:hover{
+  @apply text-blue-700 underline;
+}
+
 .ambient-blob {
   will-change: transform, opacity;
   transform-origin: center;
