@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-pale-slate: #e4f1f7;
@@ -112,12 +113,18 @@
   }
 } 
 
-.prose a{
-  @apply text-blue-500 no-underline font-medium transition-colors duration-200;
-}
+@utility prose-projects {
+  --tw-prose-body: var(--color-onyx);
+  --tw-prose-headings: var(--color-slate);
+  --tw-prose-em: var(--color-cherry-30);
+  --tw-prose-links: var(--color-cherry-40);
+  --tw-prose-bold: var(--color-cherry-30);
 
-.prose a:hover{
-  @apply text-blue-700 underline;
+  --tw-prose-invert-body: var(--color-pale-slate);
+  --tw-prose-invert-headings: var(--color-pale-slate);
+  --tw-prose-invert-em: var(--color-pink-wine-60);
+  --tw-prose-invert-links: var(--color-cherry-40);
+  --tw-prose-invert-bold: var(--color-pink-wine-60);
 }
 
 .ambient-blob {

@@ -2,7 +2,7 @@
 // src/pages/about.astro
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SplitHero from "../components/hero/HeroSplit.astro";
+import SplitHero from "../components/hero/HeroSplitLong.astro";
 import AbstractBG from "../components/bg/AbstractBG2.astro";
 import { Image } from "astro:assets";
 import sableimage from "../assets/Sable.jpg";
@@ -14,20 +14,34 @@ import irisImage from "../assets/Iris.jpg";
     <SplitHero>
       <h1
         slot="Heading"
-        class="mt-2 text-4xl font-wix tracking-tight text-pretty text-pale-slate dark:text-pale-slate"
+        class="mt-2 text-4xl font-wix tracking-tight text-pretty "
       >
         About Ava
       </h1>
       <p
         slot="description"
-        class="font-noto mt-6 text-lg/6 text-pale-slate dark:text-pale-slate"
+        class="font-noto mt-6 text-lg/6 "
       >
-        Hiya! I am a creative project manager specializing in digital games. <br
-        /><br />
-        I enjoy playing games, crafting with my hands, and listening to house, EDM,
-        and alternative rock music. <br /><br />
-        Socially, I like playing Magic: the Gathering and spending time with my cats,
-        Sable and Iris.
+      Hiya!<br /><br />
+      I'm a project manager and business analyst thriving at the intersection of 
+      creativity, tehnology, and strategy. My work lies in aligning cross-functional 
+      teams of designers, engineers, and stakeholders so that everyone stays focused 
+      and motivated while working towards the same goal. <br /><br />
+      I come with deep hands-on experience across the full project lifecycle. 
+      I speak the language of both the doers and decision-makers, building stronger 
+      communication by avoiding the "messenger" trap of management. 
+      I don't just track tasks; I understand the requirements and work behind them,
+      which lets me anticipate bottlenecks, translate needs accross departments, 
+      and protect your team's most valuable resource, their time.<br /><br />
+      My role is handling the operational load: sprint planning, issue prioritization,
+      stakeholder updates, and the bureaucratic heavy-lifting that keeps projects
+      moving smoothly. While I enjoy creative disciplines myself, my impact comes
+      from organizing the work and creating the conditions for world-class specialists
+      to do their best. <br /><br />
+      With dual degrees in Business Administration and New Media, plus international experience 
+      and a proven track record leading teams from conception to launch, I bring the 
+      big-picture strategy and the ground-level discipline needed to drive success, 
+      no matter the industry or scale. <br /><br />
       </p>
       <div slot="actions" class="mt-10 flex items-center gap-x-6">
         <a
@@ -35,7 +49,7 @@ import irisImage from "../assets/Iris.jpg";
           href="/contact"
           class="rounded-3xl bg-pale-slate px-3.5 py-2.5 text-sm font-semibold text-wine shadow-xs hover:scale-110 transition-transform duration-300 hover:bg-cherry hover:text-pale-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
         >
-          Contact</a
+          Get In Touch</a
         >
         <a
           slot="actions"
@@ -47,24 +61,26 @@ import irisImage from "../assets/Iris.jpg";
       </div>
       <div slot="frame" class="w-full">
         <Image
-          src={sableimage}
-          alt="Picture of Ava's cat, Sable"
-          class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg"
-        />
-      </div>
-      <div slot="frame" class="w-full">
-        <Image
           src={irisImage}
           alt="Picture of Ava's cat, Iris"
           class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg"
         />
       </div>
+      <div slot="frame" class="w-full">
+        <Image
+          src={sableimage}
+          alt="Picture of Ava's cat, Sable"
+          class="object-cover object-center rounded-xl shadow-xl ring-1 ring-onyx/20 dark:shadow-pale-slate/20 dark:shadow-lg"
+        />
+      </div>
+      
     </SplitHero>
   </AbstractBG>
-  <div
+  <!-- <div
     slot="main"
     class="p-8 mt-32 rounded-2xl shadow-2xl bg-pale-slate/10 dark:bg-slate/10 lg:mx-32"
   >
+  <div>
     <h1 class="font-wix text-pink-wine-50 font-bold">
       Stuff I've Been Featured In:
     </h1>
@@ -89,5 +105,6 @@ import irisImage from "../assets/Iris.jpg";
       </a>
       article highlighting some of what I have acomplished during my degree.
     </p>
-  </div>
+    </div>
+  </div> -->
 </BaseLayout>
