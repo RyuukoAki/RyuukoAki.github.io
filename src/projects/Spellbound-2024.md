@@ -1,7 +1,7 @@
 ---
-slug: "spellbound-v1"
-title: "Spellbound V1"
-description: "An isometric rogue-like game made in Godot for Game Design Theory and Practice"
+slug: "spellbound-2024"
+title: "Spellbound - 2024"
+description: "An isometric rogue-like made in Godot for Game Design Theory and Practice"
 pubDate: "2024-04"
 status: "Completed"
 contributors: ["Ava Daly", "JJ Llorin", "Maddison Whelpley", "Ivy Heal"]
@@ -29,9 +29,9 @@ gallery: [
     alt: "A screenshot of a development build of Spellbound, showing the player character in a level with a spellbook and an origami enemy."
   }
 ]
-tags: ["Godot", "coding", "games", "completed", "game design", "origami"]
+tags: ["Godot", "Game Development", "games", "completed", "game design", "origami"]
 ---
 
-*Spellbound* was the final project of the course *Game Design Theory and Practice*, where students in groups of four were tasked with creating a game that portrayed randomly drawn values. <br/><br/>
-*Spellbound* is an isometric rogue-like where the player-- playing as a wizard's aprentice-- must collect pages for their spellbook by defeating the origami creatures that have come to life from the pages of other spellbooks. with each new page collected, the player can learn a new spell, which they can use to defeat the enemies and progress through the levels. The game features a variety of spells, each with their own unique effects, as well as a simple enemy AI and a basic level design. <br/><br/>
-*Spellbound* is no longer being developed, however it was great learning experience and I am excited to be working on a remake for *Advanced Studio*. More information on the remake can be found in the project entry [***Spellbound V2***](./spellbound-v2).
+*Spellbound* is an isometric roguelike where you, a wizard's apprentice, battle origami creatures brought to life from the pages of enchanted spellbooks scattered in a wizard's tower. As you defeat each creature, you collect paper and ink to write to your own spellbook, learning new spells. With each new spell, you progress through increasingly difficult rooms and levels to challenge more powerful creatures higher in the tower. This build features a variety of spells, each with their own unique effects, as well as a simple enemy AI and a basic level design. <br/><br/>
+*Spellbound* was the final project of the course *Game Design Theory and Practice*, where students in groups of four were tasked with creating a game that portrayed randomly drawn values. The values that inspired Spellbound were **Knowledge, Magic,** and **Learning.** <br/><br/> 
+*Spellbound* is no longer being developed, however it was great learning experience and laid the foundation for a remake: [***Spellbound 2026***](./spellbound-2026).
