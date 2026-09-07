@@ -1,0 +1,40 @@
+---
+// src/pages/blog.astro
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
+import Hero from "../components/hero/HeroCenteredCondensed.astro";
+import PostBento from "../components/bento/ProjectListBento.astro";
+import PostCardBase from "../components/cards/PostCardBase.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+const allPosts: CollectionEntry<"posts">[] = (
+  await getCollection("posts")
+).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<BaseLayout title="Blog">
+  <AbstractBG slot="hero" class="-z-10">
+    <Hero>
+      <h1
+        slot="title"
+        class="font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
+      >
+        Blog Posts
+      </h1>
+    </Hero>
+  </AbstractBG>
+  <PostBento slot="main">
+    {
+      allPosts.map((post) => (
+        <PostCardBase
+          slot="cards"
+          href={`/blog/${post.id}/`}
+          project={post.data}
+        />
+      ))
+    }
+  </PostBento>
+</BaseLayout>

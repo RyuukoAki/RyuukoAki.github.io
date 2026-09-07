@@ -1,0 +1,91 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
+import Hero from "../components/hero/HeroCenteredCondensed.astro";
+
+import { Image } from "astro:assets";
+import ImageBento from "../components/bento/ProjectPageImgBento.astro";
+import type { CollectionEntry } from "astro:content";
+
+type ProjectData = CollectionEntry<"posts">["data"];
+
+interface Props {
+  post: ProjectData;
+}
+
+const { post } = Astro.props as Props;
+
+const normalizeYoutubeEmbedUrl = (value: string) => {
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return "";
+
+  if (trimmedValue.startsWith("https://www.youtube.com/embed/")) {
+    return trimmedValue;
+  }
+
+  const idFromPath = trimmedValue.match(
+    /(?:youtu\.be\/|youtube\.com\/shorts\/)([^?&/]+)/,
+  )?.[1];
+  if (idFromPath) {
+    return `https://www.youtube.com/embed/${idFromPath}`;
+  }
+
+  const idFromQuery = trimmedValue.match(/[?&]v=([^?&/]+)/)?.[1];
+  if (idFromQuery) {
+    return `https://www.youtube.com/embed/${idFromQuery}`;
+  }
+
+  return trimmedValue;
+};
+
+const youtubeEmbedUrl = post.youtubeEmbed
+  ? normalizeYoutubeEmbedUrl(post.youtubeEmbed)
+  : "";
+---
+
+<BaseLayout title={post.title}>
+  <AbstractBG slot="hero">
+    <Hero>
+      <h1
+        slot="title"
+        class="py-8 text-5xl font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
+      >
+        {post.title}
+      </h1>
+    </Hero>
+  </AbstractBG>
+  <div slot="main" class=" text-lg text-onyx dark:text-pale-slate">
+    <div class=" mx-auto rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden xl:mx-16">
+      <Image src={post.cover} alt={post.coverAlt} class="w-full h-64 object-cover"/>
+    </div></div>
+    <p slot="main" class="font-mono mt-4 lg:px-16 xl:px-32">Last Updated: {post.pubDate}</p>
+    <p slot="main" class="font-mono mb-8 lg:px-16 xl:px-32">Contributors: {post.contributors.join(",  ")}</p>
+    
+    <div slot="main" 
+      class="prose prose-posts prose-a:hover:text-cherry-30 dark:prose-invert dark:prose-a:hover:text-cherry-60 max-w-none pb-12 lg:px-16 xl:px-32 text-lg">
+    <slot />
+    </div>
+    {
+      youtubeEmbedUrl && (
+        <section
+          slot="main"
+          class="lg:px-16 xl:px-32 text-lg text-onyx dark:text-pale-slate mb-8"
+        >
+          <div class="overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 aspect-video">
+            <iframe
+              src={youtubeEmbedUrl}
+              title={`${post.title} YouTube video`}
+              class="h-full w-full"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            />
+          </div>
+        </section>
+      )
+    }
+  <div slot="main">
+    <br/><hr>
+    <p class="pb-24 font-mono">Tags: {post.tags.join(", ")}</p>
+  </div>
+</BaseLayout>

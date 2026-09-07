@@ -27,5 +27,22 @@ const projects = defineCollection({
    			})
 });
 
-// Export a single `collections` object to register your collection(s)
-export const collections = { projects };
+// New collection for blog posts
+const posts = defineCollection({
+	loader: glob({ pattern: '**/[^_]*.md', base: "./src/blog"}),
+		schema: ({ image }) => z.object({
+
+			title: z.string(),
+			description: z.string(),
+			pubDate: z.string(),
+			editDate: z.string(),
+			contributors: z.array(z.string()),
+			cover: image(),
+			coverAlt: z.string(),
+	  		youtubeEmbed: z.string().optional(),
+     		tags: z.array(z.string())
+   			})
+});
+
+// Export a single `collections` object to register collections
+export const collections = { projects, posts};
