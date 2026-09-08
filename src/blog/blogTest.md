@@ -1,26 +1,24 @@
 ---
 slug: "blog-test"
 title: "Blog Test"
-description: "the first post on the blog side of the portfolio."
-pubDate: "2026-09"
-editDate: "2026-09"
+description: "First post on the blog side of the portfolio, come check it out!"
+pubDate: "2026-09-07"
+editDate: "2026-09-07"
 contributors: ["Ava Daly"]
 cover: "./assets/SleepySable.jpg"
-coverAlt: "a verry sleepy kitty"
-youtubeEmbed: "https://youtu.be/sZIGT0ml6pA?si=idJFY8Qxyv47oFQA"
+coverAlt: "A verry sleepy kitty named Sable"
+# youtubeEmbed: "https://youtu.be/sZIGT0ml6pA?si=idJFY8Qxyv47oFQA"
 tags: ["Blog", "Portfolio", "ongoing", "games", "independent"]
 ---
 
 
-*Spellbound* is a third-person roguelike where you, a wizard's apprentice, battle origami creatures brought to life from the pages of enchanted spellbooks scattered in a wizard's tower. As you defeat each creature, you collect paper and ink to write to your own spellbook, learning new spells. With each new spell, you progress through increasingly difficult rooms and levels to challenge more powerful creatures higher in the tower. The current build includes a variety of spells with unique effects, several enemy variations, and introductory first floor with 4 levels. <br/><br/>
-This remake of [***Spellbound (2024)***](../spellbound-2024)  was taken on as my university capstone project. This version features a reimagined environment, characters and third person perspective, as well as a new spellcasting system and new art assets. *Spellbound* was made and remade in Godot, a free and open-source game engine.<br/><br/>
-The development of [***Spellbound (2024)***](../spellbound-2024) from scratch using modern development practices. This includes:<br/>
-**Engine & Animation:** [***Godot,***](https://godotengine.org/) a powerful, open-source game engine, has had major improvements in its animation and 3D environment capabilities. Unlike the previous workflow where animations had to be created in Blender (a 3D modeling and animation software) and imported into the game, Godot 4.6 allows animations to be easily built within the engine. This approach reduces import errors and provides tighter control over character movement and timing---crucial for responsive gameplay.<br/><br/>
-**Code Architecture:** I restructured the entire codebase using Object-Oriented Programming principles in GDScript, making the game more maintainable, scalable, and easier to debug. It also leave open the possibility for more expansion in the future.<br/><br/>
-**Art & Environment:** All the assets have been built in Blender, with the intention of creating a more polished and cohesive visual experience, as well as significantly improving performance with proper topology design. The original Spellbound had multiple set props with 8 million+ vertices which would consistently crash both Godot and Blender.<br/><br/>
-**Project History:** Spellbound holds personal value as my first “shipped” game. When the concept was first developed, I had minimal development experience. Now with years of professional growth, coming back to Spellbound allows me to realize the vision first developed three years ago. Beyond technical improvements, this remake represents my evolution as a developer—it's both a tangible demonstration of my growth and an opportunity to create something I can genuinely be proud of.<br/><br/>
-*Spellbound* was presented at [*Vibe Fest 2026*](https://stories.ulethbridge.ca/vibe-fest-celebrates-the-arts-in-explosion-of-creative-energy/), the University of Lethbridge's annual Fine Arts festival, and at *Lethbridge's High Innovation Conference* as part of the [***Lethbridge Game Developers Guild***](https://lgdg.org/) booth. 
+*Hiya!*
 
----
+The blog marks a new chapter in tracking the stuff that I'm doing. I've often found that I forget about the progress I've made on smaller projects and, as a result, forget about it entirely, instead focusing on the progress I have yet to make. My goal with this blog is to occasionally note some of the things I have learned, and overall track and validate the progress I have made on different projects.
 
-*There are currently no plans to release the game commercially, but I am open to the possibility in the future.*
+Today with building the blog, I revisited Astro's [content collections](https://docs.astro.build/en/guides/content-collections/) to build a new content group for dynamically creating pages for each blog post from markdown. I had a vague understanding from the last time I had built one, so for the most part I copied, pasted, and modified my existing code from the `projects` section to build the `posts` section. I continue to find it fascinating that I struggle more with basic HTML structure than Astro and Tailwind, though Tailwind at times is a close second, mostly when it comes to grids / flexboxes.
+
+[**INDIE RODEO**](https://indierodeo.com/) is upcoming, and I am super excited to be attending! I really look forward to meeting people in the space, and learning more about game production in Calgary and Alberta. I would like to find a mentor in the space as well, and I think Inde Rodeo might be the best place to try and find people with more experience than me. 
+
+I also look forward to the inspiration / motivation that Indie Rodeo will bring. Since I've begun going to the CGDA's Indie Fridays, I've been way more motivated to work on projects like this portfolio and [Ritix](././projects/ritix).
+

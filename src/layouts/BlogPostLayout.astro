@@ -56,10 +56,13 @@ const youtubeEmbedUrl = post.youtubeEmbed
   </AbstractBG>
   <div slot="main" class=" text-lg text-onyx dark:text-pale-slate">
     <div class=" mx-auto rounded-xl shadow-xl ring-1 ring-white/10 overflow-hidden xl:mx-16">
-      <Image src={post.cover} alt={post.coverAlt} class="w-full h-64 object-cover"/>
-    </div></div>
-    <p slot="main" class="font-mono mt-4 lg:px-16 xl:px-32">Last Updated: {post.pubDate}</p>
-    <p slot="main" class="font-mono mb-8 lg:px-16 xl:px-32">Contributors: {post.contributors.join(",  ")}</p>
+      <Image src={post.cover} alt={post.coverAlt} class="w-full h-64 md:h-80 lg:h-96 object-cover"/>
+    </div>
+      <p slot="main" class="font-mono lg:px-12 xl:px-24">Pictured: {post.coverAlt}</p>
+    </div>
+    <p slot="main" class="font-mono mt-4 lg:px-16 xl:px-32">Posted: {post.pubDate}</p>
+    <p slot="main" class="font-mono lg:px-16 xl:px-32">Last Updated: {post.editDate}</p>
+    <p slot="main" class="font-mono mb-8 lg:px-16 xl:px-32">Authored by: {post.contributors.join(",  ")}</p>
     
     <div slot="main" 
       class="prose prose-posts prose-a:hover:text-cherry-30 dark:prose-invert dark:prose-a:hover:text-cherry-60 max-w-none pb-12 lg:px-16 xl:px-32 text-lg">

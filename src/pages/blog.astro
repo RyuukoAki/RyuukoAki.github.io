@@ -4,14 +4,15 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AbstractBG from "../components/bg/AbstractBGCondensed.astro";
 import Hero from "../components/hero/HeroCenteredCondensed.astro";
-import PostBento from "../components/bento/ProjectListBento.astro";
+import PostBento from "../components/bento/BlogPostListBento.astro";
 import PostCardBase from "../components/cards/PostCardBase.astro";
 
 import { getCollection, type CollectionEntry } from "astro:content";
 const allPosts: CollectionEntry<"posts">[] = (
   await getCollection("posts")
 ).sort(
-  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
 );
 ---
 
@@ -22,8 +23,9 @@ const allPosts: CollectionEntry<"posts">[] = (
         slot="title"
         class="font-bold font-wix tracking-tight text-balance text-onyx dark:text-pale-slate sm:text-7xl"
       >
-        Blog Posts
+        Posts
       </h1>
+      <h4 slot="subtitle" class="text-onyx dark:text-pale-slate">Read about what I've been up to lately</h4>
     </Hero>
   </AbstractBG>
   <PostBento slot="main">
@@ -32,7 +34,7 @@ const allPosts: CollectionEntry<"posts">[] = (
         <PostCardBase
           slot="cards"
           href={`/blog/${post.id}/`}
-          project={post.data}
+          post={post.data}
         />
       ))
     }

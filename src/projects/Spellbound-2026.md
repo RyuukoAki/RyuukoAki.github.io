@@ -2,7 +2,7 @@
 slug: "spellbound-2026"
 title: "Spellbound - 2026"
 description: "A remake of the original Spellbound, made in Godot for Advanced Studio. This version features a completely 3D environment, characters and third person perspective, as well as a new spellcasting system and new art assets."
-pubDate: "2026-09"
+pubDate: "2026-06"
 status: "Paused"
 contributors: ["Ava Daly"]
 cover: "./assets/spellbound2/spellbound2-cover.png"
