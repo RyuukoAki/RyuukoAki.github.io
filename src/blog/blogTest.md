@@ -19,4 +19,4 @@ Today with building the blog, I revisited Astro's [content collections](https://
 
 [**INDIE RODEO**](https://indierodeo.com/) is upcoming, and I am super excited to be attending! I really look forward to meeting people in the space, and learning more about game production in Calgary and Alberta. I would like to find a mentor in the space as well, and I think Inde Rodeo might be the best place to try and find people with more experience than me.
 
-I also look forward to the inspiration / motivation that Indie Rodeo will bring. Since I've begun going to the CGDA's Indie Fridays, I've been way more motivated to work on projects like this portfolio and [Ritix](./projects/ritix).
+I also look forward to the inspiration / motivation that Indie Rodeo will bring. Since I've begun going to the CGDA's Indie Fridays, I've been way more motivated to work on projects like this portfolio and [Ritix](/projects/ritix).
